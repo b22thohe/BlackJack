@@ -58,8 +58,7 @@
             this.lblP2BlackJackOutput = new System.Windows.Forms.Label();
             this.lblP2BlackJack = new System.Windows.Forms.Label();
             this.lblP2WinOutput = new System.Windows.Forms.Label();
-            this.btnP1Stats = new System.Windows.Forms.Button();
-            this.btnP2Stats = new System.Windows.Forms.Button();
+            this.btnStats = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitP1)).BeginInit();
             this.splitP1.Panel1.SuspendLayout();
@@ -93,8 +92,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnQuit, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.pnlP1Stats, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pnlP2Stats, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnP1Stats, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnP2Stats, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnStats, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -421,25 +419,16 @@
             this.lblP2WinOutput.TabIndex = 16;
             this.lblP2WinOutput.Text = "0";
             // 
-            // btnP1Stats
+            // btnStats
             // 
-            this.btnP1Stats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnP1Stats.Location = new System.Drawing.Point(669, 333);
-            this.btnP1Stats.Name = "btnP1Stats";
-            this.btnP1Stats.Size = new System.Drawing.Size(94, 54);
-            this.btnP1Stats.TabIndex = 14;
-            this.btnP1Stats.Text = "P1 Stats";
-            this.btnP1Stats.UseVisualStyleBackColor = true;
-            // 
-            // btnP2Stats
-            // 
-            this.btnP2Stats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnP2Stats.Location = new System.Drawing.Point(769, 333);
-            this.btnP2Stats.Name = "btnP2Stats";
-            this.btnP2Stats.Size = new System.Drawing.Size(94, 54);
-            this.btnP2Stats.TabIndex = 15;
-            this.btnP2Stats.Text = "P2 Stats";
-            this.btnP2Stats.UseVisualStyleBackColor = true;
+            this.btnStats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStats.Location = new System.Drawing.Point(769, 333);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(94, 54);
+            this.btnStats.TabIndex = 15;
+            this.btnStats.Text = "Statistics";
+            this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
             // frmMain
             // 
@@ -507,8 +496,7 @@
         private System.Windows.Forms.Label lblP2Win;
         private System.Windows.Forms.Label lblP2BlackJack;
         private System.Windows.Forms.Label lblP2WinOutput;
-        private System.Windows.Forms.Button btnP1Stats;
-        private System.Windows.Forms.Button btnP2Stats;
+        private System.Windows.Forms.Button btnStats;
     }
 }
 

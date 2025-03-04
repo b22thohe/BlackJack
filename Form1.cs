@@ -17,14 +17,8 @@ namespace BlackJack
         List<Card> P1Cards;
         List<Card> P2Cards;
 
-        // Fields to hold statistics
-        int p1GamesPlayed = 0;
-        int p1Wins = 0;
-        int p1BlackJacks = 0;
-        int p2GamesPlayed = 0;
-        int p2Wins = 0;
-        int p2BlackJacks = 0;
 
+        // Constructor
         public frmMain()
         {
             InitializeComponent();
@@ -76,7 +70,7 @@ namespace BlackJack
                     if (IsBusted(Convert.ToInt16(lblP1ScoreOutput.Text)))
                     {
                         MessageBox.Show("You are busted!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        p2Wins += 1;
+                        GameData.p2Wins += 1;
                         UpdateWinsLabels();
                         InitializeGame();
                         ClearBoard();
@@ -87,7 +81,7 @@ namespace BlackJack
                     if (IsBusted(Convert.ToInt16(lblP2ScoreOutput.Text)))
                     {
                         MessageBox.Show("You are busted!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        p1Wins += 1;
+                        GameData.p1Wins += 1;
                         UpdateWinsLabels();
                         InitializeGame();
                         ClearBoard();
@@ -100,8 +94,8 @@ namespace BlackJack
                     if (IsTwentyone(Convert.ToInt16(lblP1ScoreOutput.Text)))
                     {
                         MessageBox.Show("Player 1 got BlackJack!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        p1BlackJacks += 1;
-                        p1Wins += 1;
+                        GameData.p1BlackJacks += 1;
+                        GameData.p1Wins += 1;
                         UpdateBlackJackLabels();
                         ClearBoard();
                         InitializeGame();
@@ -112,8 +106,8 @@ namespace BlackJack
                     if (IsTwentyone(Convert.ToInt16(lblP2ScoreOutput.Text)))
                     {
                         MessageBox.Show("Player 2 got BlackJack!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        p2BlackJacks += 1;
-                        p2Wins += 1;
+                        GameData.p2BlackJacks += 1;
+                        GameData.p2Wins += 1;
                         UpdateBlackJackLabels();
                         ClearBoard();
                         InitializeGame();
@@ -166,8 +160,8 @@ namespace BlackJack
             btnP2Stay.Enabled = false;
 
             // Update games played variables
-            p1GamesPlayed += 1;
-            p2GamesPlayed += 1;
+            GameData.p1GamesPlayed += 1;
+            GameData.p2GamesPlayed += 1;
         }
 
         private void btnP1Hit_Click(object sender, EventArgs e)
@@ -207,20 +201,20 @@ namespace BlackJack
             {
                 MessageBox.Show("Player 1 wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 // Update P1 statistics
-                p1Wins += 1;
+                GameData.p1Wins += 1;
 
                 // DEBUG - REMOVE
                 Debug.WriteLine("--> P1 has won");
-                Debug.WriteLine($"p1Wins: {p1Wins}, p1GamesPlayed: {p1GamesPlayed}");
+                Debug.WriteLine($"p1Wins: {GameData.p1Wins}, p1GamesPlayed: {GameData.p1GamesPlayed}");
             }
             else if (player1WinMargin > player2WinMargin)
             {
                 MessageBox.Show("Player 2 wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                p2Wins += 1;
+                GameData.p2Wins += 1;
 
                 // DEBUG - REMOVE
                 Debug.WriteLine("--> P2 has won");
-                Debug.WriteLine($"p2Wins: {p2Wins}, p2GamesPlayed: {p2GamesPlayed}");
+                Debug.WriteLine($"p2Wins: {GameData.p2Wins}, p2GamesPlayed: {GameData.p2GamesPlayed}");
             }
             else
             {
@@ -234,20 +228,26 @@ namespace BlackJack
 
         private void UpdateBlackJackLabels()
         {
-            lblP1BlackJackOutput.Text = Convert.ToString(p1BlackJacks);
-            lblP2BlackJackOutput.Text = Convert.ToString(p2BlackJacks);
+            lblP1BlackJackOutput.Text = Convert.ToString(GameData.p1BlackJacks);
+            lblP2BlackJackOutput.Text = Convert.ToString(GameData.p2BlackJacks);
             UpdateWinsLabels();
         }
 
         private void UpdateWinsLabels()
         {
-            lblP1WinOutput.Text = Convert.ToString(((double)p1Wins / p1GamesPlayed) * 100);
-            lblP2WinOutput.Text = Convert.ToString(((double)p2Wins / p2GamesPlayed) * 100);
+            lblP1WinOutput.Text = Convert.ToString(((double)GameData.p1Wins / GameData.p1GamesPlayed) * 100);
+            lblP2WinOutput.Text = Convert.ToString(((double)GameData.p2Wins / GameData.p2GamesPlayed) * 100);
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+            Form statForm = new Form2();
+            statForm.Show();
         }
     }
 }
