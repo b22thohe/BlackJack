@@ -158,10 +158,6 @@ namespace BlackJack
             // Prevent player 2 from acting
             btnP2Hit.Enabled = false;
             btnP2Stay.Enabled = false;
-
-            // Update games played variables
-            GameData.p1GamesPlayed += 1;
-            GameData.p2GamesPlayed += 1;
         }
 
         private void btnP1Hit_Click(object sender, EventArgs e)
@@ -235,6 +231,10 @@ namespace BlackJack
 
         private void UpdateWinsLabels()
         {
+            // Update games played variables
+            GameData.p1GamesPlayed += 1;
+            GameData.p2GamesPlayed += 1;
+
             lblP1WinOutput.Text = Convert.ToString(((double)GameData.p1Wins / GameData.p1GamesPlayed) * 100);
             lblP2WinOutput.Text = Convert.ToString(((double)GameData.p2Wins / GameData.p2GamesPlayed) * 100);
         }
@@ -246,8 +246,10 @@ namespace BlackJack
 
         private void btnStats_Click(object sender, EventArgs e)
         {
-            Form statForm = new Form2();
-            statForm.Show();
+            using (Form statForm = new Form2())
+            {
+                statForm.ShowDialog();
+            }
         }
     }
 }
