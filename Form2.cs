@@ -196,7 +196,6 @@ namespace BlackJack
                                 default:
                                     MessageBox.Show("Unknown data found when reading from file.", path, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return false;
-                                    break;
                             }
                         } else
                         {
@@ -220,7 +219,6 @@ namespace BlackJack
                                 default:
                                     MessageBox.Show("Unknown data found when reading from file.", path, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return false;
-                                    break;
                             }
                         }
                     } else
