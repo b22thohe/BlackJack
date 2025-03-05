@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace BlackJack
 {
     /// <summary>
-    /// Class stores values for all the statistics
+    /// Static helper class stores values for all the statistics
     /// </summary>
     public static class GameData
     {

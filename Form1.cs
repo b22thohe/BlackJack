@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace BlackJack
 {
+    /// <summary>
+    /// Creates a form to handle the game GUI and game logic.
+    /// </summary>
     public partial class frmMain : Form
     {
         // Need Lists to hold each player's cards
@@ -23,6 +26,7 @@ namespace BlackJack
         {
             InitializeComponent();
 
+            // Initialize player's card lists
             P1Cards = new List<Card>();
             P2Cards = new List<Card>();
 

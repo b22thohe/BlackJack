@@ -6,21 +6,32 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
+    // Store names of card types as Enum
     public enum CardColor { Diamonds, Clubs, Spades, Hearts}
+
+    /// <summary>
+    /// Class creates card for use in the game.
+    /// Every card get a color and a value.
+    /// </summary>
 
     public class Card
     {
+        // Fields for storing card color and value.
+        // FaceValue is used to get the correct filename for card images
         public CardColor Color { get; set; }
         public int CardValue { get; set; }
         public int FaceValue { get; set; }
+
+        // Since it is set as static, the same random object will be used for entire game
         private static Random rnd = new Random();
 
         
         // Constructor
         public Card(CardColor color, int faceValue) { 
             this.Color = color;
-
             
+                // All dressed cards will get 10 as CardValue, but different value for
+                // FaceValue to be able to retrieve correct image
                 switch (faceValue) { 
                     case 11:
                         this.CardValue = 10;
@@ -41,6 +52,8 @@ namespace BlackJack
                 }
         }
 
+        // Method returns correct filename for card image.
+        // File name format: color_value
         public string ImageFileName
         {
             get
@@ -71,6 +84,9 @@ namespace BlackJack
             }
         }
 
+        /**
+         * Method takes player's list of cards and calculates sum of total value of cards in list
+         * **/
         public static int Sum(List<Card> cards)
         {
             int result = 0;
@@ -81,6 +97,9 @@ namespace BlackJack
             return result;
         }
 
+        /**
+         * Method calls constructor with randomized parameters
+         * **/
         public static Card RandomCard()
         {
             return new Card((CardColor)rnd.Next(0, 3), rnd.Next(1, 14));
