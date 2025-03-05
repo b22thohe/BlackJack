@@ -31,56 +31,62 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.lblP1GamesOutput = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.lblP1WinsOutput = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.lblP1DrawsOutput = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.lblP1LossesOutput = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.lblP1BlackJackOutput = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.lblP1WinPercentageOutput = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
             this.lblP2GamesOutput = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.lblP2WinsOutput = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
             this.lblP2DrawsOutput = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
             this.lblP2LossesOutput = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.lblP2BlackJackOutput = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
             this.lblP2WinPercentageOutput = new System.Windows.Forms.Label();
+            this.btnSaveP1Stats = new System.Windows.Forms.Button();
+            this.btnLoadP1Stats = new System.Windows.Forms.Button();
+            this.btnSaveP2Stats = new System.Windows.Forms.Button();
+            this.btnLoadP2Stats = new System.Windows.Forms.Button();
+            this.ofdOpenStats = new System.Windows.Forms.OpenFileDialog();
+            this.sfdSaveStats = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -144,6 +150,10 @@
             this.tableLayoutPanel1.Controls.Add(this.panel23, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel24, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel25, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnSaveP1Stats, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnLoadP1Stats, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnSaveP2Stats, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnLoadP2Stats, 3, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -180,16 +190,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Player 2";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Games played:";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
@@ -208,6 +208,16 @@
             this.panel2.Size = new System.Drawing.Size(169, 50);
             this.panel2.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 26);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Games played:";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label4);
@@ -215,38 +225,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(169, 50);
             this.panel3.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(3, 171);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(169, 50);
-            this.panel4.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(3, 227);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(169, 50);
-            this.panel5.TabIndex = 6;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(3, 283);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(169, 50);
-            this.panel6.TabIndex = 7;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Location = new System.Drawing.Point(3, 339);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(169, 50);
-            this.panel7.TabIndex = 8;
             // 
             // label4
             // 
@@ -258,6 +236,14 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Wins:";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(3, 171);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(169, 50);
+            this.panel4.TabIndex = 5;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -267,6 +253,14 @@
             this.label5.Size = new System.Drawing.Size(80, 26);
             this.label5.TabIndex = 4;
             this.label5.Text = "Draws:";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Location = new System.Drawing.Point(3, 227);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(169, 50);
+            this.panel5.TabIndex = 6;
             // 
             // label6
             // 
@@ -278,6 +272,14 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Losses:";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Location = new System.Drawing.Point(3, 283);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(169, 50);
+            this.panel6.TabIndex = 7;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -287,6 +289,14 @@
             this.label7.Size = new System.Drawing.Size(128, 26);
             this.label7.TabIndex = 6;
             this.label7.Text = "BlackJacks:";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Location = new System.Drawing.Point(3, 339);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(169, 50);
+            this.panel7.TabIndex = 8;
             // 
             // label8
             // 
@@ -306,38 +316,6 @@
             this.panel8.Size = new System.Drawing.Size(169, 50);
             this.panel8.TabIndex = 9;
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Location = new System.Drawing.Point(353, 115);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(169, 50);
-            this.panel9.TabIndex = 10;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label11);
-            this.panel10.Location = new System.Drawing.Point(353, 171);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(169, 50);
-            this.panel10.TabIndex = 11;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label12);
-            this.panel11.Location = new System.Drawing.Point(353, 227);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(169, 50);
-            this.panel11.TabIndex = 12;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label13);
-            this.panel12.Location = new System.Drawing.Point(353, 283);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(169, 50);
-            this.panel12.TabIndex = 13;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -347,6 +325,14 @@
             this.label9.Size = new System.Drawing.Size(159, 26);
             this.label9.TabIndex = 3;
             this.label9.Text = "Games played:";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label10);
+            this.panel9.Location = new System.Drawing.Point(353, 115);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(169, 50);
+            this.panel9.TabIndex = 10;
             // 
             // label10
             // 
@@ -358,6 +344,14 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Wins:";
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label11);
+            this.panel10.Location = new System.Drawing.Point(353, 171);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(169, 50);
+            this.panel10.TabIndex = 11;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -367,6 +361,14 @@
             this.label11.Size = new System.Drawing.Size(80, 26);
             this.label11.TabIndex = 5;
             this.label11.Text = "Draws:";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label12);
+            this.panel11.Location = new System.Drawing.Point(353, 227);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(169, 50);
+            this.panel11.TabIndex = 12;
             // 
             // label12
             // 
@@ -378,6 +380,14 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Losses:";
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label13);
+            this.panel12.Location = new System.Drawing.Point(353, 283);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(169, 50);
+            this.panel12.TabIndex = 13;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -388,6 +398,14 @@
             this.label13.TabIndex = 7;
             this.label13.Text = "BlackJacks:";
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label14);
+            this.panel13.Location = new System.Drawing.Point(353, 339);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(169, 50);
+            this.panel13.TabIndex = 14;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -397,14 +415,6 @@
             this.label14.Size = new System.Drawing.Size(82, 26);
             this.label14.TabIndex = 8;
             this.label14.Text = "Win %:";
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label14);
-            this.panel13.Location = new System.Drawing.Point(353, 339);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(169, 50);
-            this.panel13.TabIndex = 14;
             // 
             // btnClose
             // 
@@ -425,46 +435,6 @@
             this.panel14.Size = new System.Drawing.Size(169, 50);
             this.panel14.TabIndex = 16;
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.lblP1WinsOutput);
-            this.panel15.Location = new System.Drawing.Point(178, 115);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(169, 50);
-            this.panel15.TabIndex = 17;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.lblP1DrawsOutput);
-            this.panel16.Location = new System.Drawing.Point(178, 171);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(169, 50);
-            this.panel16.TabIndex = 18;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.lblP1LossesOutput);
-            this.panel17.Location = new System.Drawing.Point(178, 227);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(169, 50);
-            this.panel17.TabIndex = 19;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.lblP1BlackJackOutput);
-            this.panel18.Location = new System.Drawing.Point(178, 283);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(169, 50);
-            this.panel18.TabIndex = 20;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.lblP1WinPercentageOutput);
-            this.panel19.Location = new System.Drawing.Point(178, 339);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(169, 50);
-            this.panel19.TabIndex = 21;
-            // 
             // lblP1GamesOutput
             // 
             this.lblP1GamesOutput.AutoSize = true;
@@ -474,6 +444,14 @@
             this.lblP1GamesOutput.Size = new System.Drawing.Size(30, 31);
             this.lblP1GamesOutput.TabIndex = 0;
             this.lblP1GamesOutput.Text = "0";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.lblP1WinsOutput);
+            this.panel15.Location = new System.Drawing.Point(178, 115);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(169, 50);
+            this.panel15.TabIndex = 17;
             // 
             // lblP1WinsOutput
             // 
@@ -485,6 +463,14 @@
             this.lblP1WinsOutput.TabIndex = 1;
             this.lblP1WinsOutput.Text = "0";
             // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.lblP1DrawsOutput);
+            this.panel16.Location = new System.Drawing.Point(178, 171);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(169, 50);
+            this.panel16.TabIndex = 18;
+            // 
             // lblP1DrawsOutput
             // 
             this.lblP1DrawsOutput.AutoSize = true;
@@ -494,6 +480,14 @@
             this.lblP1DrawsOutput.Size = new System.Drawing.Size(30, 31);
             this.lblP1DrawsOutput.TabIndex = 2;
             this.lblP1DrawsOutput.Text = "0";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.lblP1LossesOutput);
+            this.panel17.Location = new System.Drawing.Point(178, 227);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(169, 50);
+            this.panel17.TabIndex = 19;
             // 
             // lblP1LossesOutput
             // 
@@ -505,6 +499,14 @@
             this.lblP1LossesOutput.TabIndex = 3;
             this.lblP1LossesOutput.Text = "0";
             // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.lblP1BlackJackOutput);
+            this.panel18.Location = new System.Drawing.Point(178, 283);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(169, 50);
+            this.panel18.TabIndex = 20;
+            // 
             // lblP1BlackJackOutput
             // 
             this.lblP1BlackJackOutput.AutoSize = true;
@@ -514,6 +516,14 @@
             this.lblP1BlackJackOutput.Size = new System.Drawing.Size(30, 31);
             this.lblP1BlackJackOutput.TabIndex = 4;
             this.lblP1BlackJackOutput.Text = "0";
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.lblP1WinPercentageOutput);
+            this.panel19.Location = new System.Drawing.Point(178, 339);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(169, 50);
+            this.panel19.TabIndex = 21;
             // 
             // lblP1WinPercentageOutput
             // 
@@ -533,46 +543,6 @@
             this.panel20.Size = new System.Drawing.Size(169, 50);
             this.panel20.TabIndex = 22;
             // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.lblP2WinsOutput);
-            this.panel21.Location = new System.Drawing.Point(528, 115);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(169, 50);
-            this.panel21.TabIndex = 23;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.lblP2DrawsOutput);
-            this.panel22.Location = new System.Drawing.Point(528, 171);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(169, 50);
-            this.panel22.TabIndex = 24;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.lblP2LossesOutput);
-            this.panel23.Location = new System.Drawing.Point(528, 227);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(169, 50);
-            this.panel23.TabIndex = 25;
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.lblP2BlackJackOutput);
-            this.panel24.Location = new System.Drawing.Point(528, 283);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(169, 50);
-            this.panel24.TabIndex = 26;
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.lblP2WinPercentageOutput);
-            this.panel25.Location = new System.Drawing.Point(528, 339);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(169, 50);
-            this.panel25.TabIndex = 27;
-            // 
             // lblP2GamesOutput
             // 
             this.lblP2GamesOutput.AutoSize = true;
@@ -582,6 +552,14 @@
             this.lblP2GamesOutput.Size = new System.Drawing.Size(30, 31);
             this.lblP2GamesOutput.TabIndex = 1;
             this.lblP2GamesOutput.Text = "0";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.lblP2WinsOutput);
+            this.panel21.Location = new System.Drawing.Point(528, 115);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(169, 50);
+            this.panel21.TabIndex = 23;
             // 
             // lblP2WinsOutput
             // 
@@ -593,6 +571,14 @@
             this.lblP2WinsOutput.TabIndex = 2;
             this.lblP2WinsOutput.Text = "0";
             // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.lblP2DrawsOutput);
+            this.panel22.Location = new System.Drawing.Point(528, 171);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(169, 50);
+            this.panel22.TabIndex = 24;
+            // 
             // lblP2DrawsOutput
             // 
             this.lblP2DrawsOutput.AutoSize = true;
@@ -602,6 +588,14 @@
             this.lblP2DrawsOutput.Size = new System.Drawing.Size(30, 31);
             this.lblP2DrawsOutput.TabIndex = 3;
             this.lblP2DrawsOutput.Text = "0";
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.lblP2LossesOutput);
+            this.panel23.Location = new System.Drawing.Point(528, 227);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(169, 50);
+            this.panel23.TabIndex = 25;
             // 
             // lblP2LossesOutput
             // 
@@ -613,6 +607,14 @@
             this.lblP2LossesOutput.TabIndex = 4;
             this.lblP2LossesOutput.Text = "0";
             // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.lblP2BlackJackOutput);
+            this.panel24.Location = new System.Drawing.Point(528, 283);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(169, 50);
+            this.panel24.TabIndex = 26;
+            // 
             // lblP2BlackJackOutput
             // 
             this.lblP2BlackJackOutput.AutoSize = true;
@@ -623,6 +625,14 @@
             this.lblP2BlackJackOutput.TabIndex = 5;
             this.lblP2BlackJackOutput.Text = "0";
             // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.lblP2WinPercentageOutput);
+            this.panel25.Location = new System.Drawing.Point(528, 339);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(169, 50);
+            this.panel25.TabIndex = 27;
+            // 
             // lblP2WinPercentageOutput
             // 
             this.lblP2WinPercentageOutput.AutoSize = true;
@@ -632,6 +642,63 @@
             this.lblP2WinPercentageOutput.Size = new System.Drawing.Size(30, 31);
             this.lblP2WinPercentageOutput.TabIndex = 6;
             this.lblP2WinPercentageOutput.Text = "0";
+            // 
+            // btnSaveP1Stats
+            // 
+            this.btnSaveP1Stats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSaveP1Stats.Location = new System.Drawing.Point(3, 395);
+            this.btnSaveP1Stats.Name = "btnSaveP1Stats";
+            this.btnSaveP1Stats.Size = new System.Drawing.Size(169, 52);
+            this.btnSaveP1Stats.TabIndex = 28;
+            this.btnSaveP1Stats.Text = "Save P1 Stats";
+            this.btnSaveP1Stats.UseVisualStyleBackColor = true;
+            this.btnSaveP1Stats.Click += new System.EventHandler(this.btnSaveP1Stats_Click);
+            // 
+            // btnLoadP1Stats
+            // 
+            this.btnLoadP1Stats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLoadP1Stats.Location = new System.Drawing.Point(178, 395);
+            this.btnLoadP1Stats.Name = "btnLoadP1Stats";
+            this.btnLoadP1Stats.Size = new System.Drawing.Size(169, 52);
+            this.btnLoadP1Stats.TabIndex = 29;
+            this.btnLoadP1Stats.Text = "Load P1 Stats";
+            this.btnLoadP1Stats.UseVisualStyleBackColor = true;
+            this.btnLoadP1Stats.Click += new System.EventHandler(this.btnLoadP1Stats_Click);
+            // 
+            // btnSaveP2Stats
+            // 
+            this.btnSaveP2Stats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSaveP2Stats.Location = new System.Drawing.Point(353, 395);
+            this.btnSaveP2Stats.Name = "btnSaveP2Stats";
+            this.btnSaveP2Stats.Size = new System.Drawing.Size(169, 52);
+            this.btnSaveP2Stats.TabIndex = 30;
+            this.btnSaveP2Stats.Text = "Save P2 Stats";
+            this.btnSaveP2Stats.UseVisualStyleBackColor = true;
+            this.btnSaveP2Stats.Click += new System.EventHandler(this.btnSaveP2Stats_Click);
+            // 
+            // btnLoadP2Stats
+            // 
+            this.btnLoadP2Stats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLoadP2Stats.Location = new System.Drawing.Point(528, 395);
+            this.btnLoadP2Stats.Name = "btnLoadP2Stats";
+            this.btnLoadP2Stats.Size = new System.Drawing.Size(169, 52);
+            this.btnLoadP2Stats.TabIndex = 31;
+            this.btnLoadP2Stats.Text = "Load P2 Stats";
+            this.btnLoadP2Stats.UseVisualStyleBackColor = true;
+            this.btnLoadP2Stats.Click += new System.EventHandler(this.btnLoadP2Stats_Click);
+            // 
+            // ofdOpenStats
+            // 
+            this.ofdOpenStats.DefaultExt = "txt";
+            this.ofdOpenStats.FileName = "openFileDialog1";
+            this.ofdOpenStats.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            this.ofdOpenStats.Title = "Load Statistics";
+            // 
+            // sfdSaveStats
+            // 
+            this.sfdSaveStats.DefaultExt = "txt";
+            this.sfdSaveStats.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*\"";
+            this.sfdSaveStats.Title = "Save Statistics";
             // 
             // Form2
             // 
@@ -751,5 +818,11 @@
         private System.Windows.Forms.Label lblP2LossesOutput;
         private System.Windows.Forms.Label lblP2BlackJackOutput;
         private System.Windows.Forms.Label lblP2WinPercentageOutput;
+        private System.Windows.Forms.Button btnSaveP1Stats;
+        private System.Windows.Forms.Button btnLoadP1Stats;
+        private System.Windows.Forms.Button btnSaveP2Stats;
+        private System.Windows.Forms.Button btnLoadP2Stats;
+        private System.Windows.Forms.OpenFileDialog ofdOpenStats;
+        private System.Windows.Forms.SaveFileDialog sfdSaveStats;
     }
 }

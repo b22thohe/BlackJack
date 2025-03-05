@@ -114,8 +114,6 @@ namespace BlackJack
                     }
                 }
             }
-
-            // TODO: Update score labels
         }
 
         private Boolean IsBusted(int score)
@@ -215,6 +213,8 @@ namespace BlackJack
             else
             {
                 MessageBox.Show("It's a draw!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GameData.p1Draws += 1;
+                GameData.p2Draws += 1;
             }
 
             UpdateWinsLabels();
