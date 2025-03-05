@@ -196,19 +196,11 @@ namespace BlackJack
                 MessageBox.Show("Player 1 wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 // Update P1 statistics
                 GameData.p1Wins += 1;
-
-                // DEBUG - REMOVE
-                Debug.WriteLine("--> P1 has won");
-                Debug.WriteLine($"p1Wins: {GameData.p1Wins}, p1GamesPlayed: {GameData.p1GamesPlayed}");
             }
             else if (player1WinMargin > player2WinMargin)
             {
                 MessageBox.Show("Player 2 wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 GameData.p2Wins += 1;
-
-                // DEBUG - REMOVE
-                Debug.WriteLine("--> P2 has won");
-                Debug.WriteLine($"p2Wins: {GameData.p2Wins}, p2GamesPlayed: {GameData.p2GamesPlayed}");
             }
             else
             {
