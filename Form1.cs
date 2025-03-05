@@ -194,13 +194,15 @@ namespace BlackJack
             if (player1WinMargin < player2WinMargin)
             {
                 MessageBox.Show("Player 1 wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                // Update P1 statistics
+                // Update statistics
                 GameData.p1Wins += 1;
+                GameData.p2Losses += 1;
             }
             else if (player1WinMargin > player2WinMargin)
             {
                 MessageBox.Show("Player 2 wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 GameData.p2Wins += 1;
+                GameData.p1Losses += 1;
             }
             else
             {
